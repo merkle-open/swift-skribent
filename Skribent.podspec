@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
 
   s.module_name = 'Skribent'
-  s.source_files = "Sources/#{s.module_name}/*.{swift}"
+  s.source_files = "Sources/#{s.module_name}/**/*.{swift}"
 end
