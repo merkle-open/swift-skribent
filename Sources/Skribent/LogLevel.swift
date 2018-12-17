@@ -1,5 +1,8 @@
 import Foundation
+
+#if canImport(os)
 import os.log
+#endif
 
 public enum LogLevel {
     case debug(CustomStringConvertible)

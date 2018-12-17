@@ -1,5 +1,4 @@
 import Skribent
-import os.log
 
 extension Tag {
     static var appStore: Tag {
