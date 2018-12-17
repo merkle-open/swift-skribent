@@ -43,6 +43,7 @@ jobs:
       xcode: "10.1.0"
     steps:
       - checkout
+      - bundle exec pod lib lint
       
 
 workflows:
@@ -51,3 +52,4 @@ workflows:
     jobs:
       - test_xcode
       - test_swift_package_manager
+      - pod_lint
