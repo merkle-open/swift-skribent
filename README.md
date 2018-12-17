@@ -1,8 +1,10 @@
-#  Skribent 📜
+# Skribent 📜
 
->  Norsk: skribent m1 (fra latin av scribere 'skrive') forfatter, særlig av essay og avhandlinger eller artikler i dagspressen
+[![CircleCI](https://circleci.com/gh/namics/swift-skribent.svg?style=svg)](https://circleci.com/gh/namics/swift-skribent)
 
->  Deutsch: Vielschreiber, Schreiberling (zu lateinisch scribens (Genitiv: scribentis), 1. Partizip von: scribere = schreiben)
+> Norsk: skribent m1 (fra latin av scribere 'skrive') forfatter, særlig av essay og avhandlinger eller artikler i dagspressen
+
+> Deutsch: Vielschreiber, Schreiberling (zu lateinisch scribens (Genitiv: scribentis), 1. Partizip von: scribere = schreiben)
 
 Skribent is an easy zero config Logger which still can be extended at some point and is typesafe
 
@@ -13,7 +15,7 @@ Skribent.log(level: .error("This is an error", AppStoreErrors.appStoreOffline))
 Skribent.log(level: .warning("This is a warning"))
 ```
 
-# What and where is logged
+## What and where is logged
 
 Skribent uses the unified logging system provided by Apple if possible. This means all messages get logged into
 the developer console and device console as well the levels `error` and `warning` are persisted to the data store.
@@ -34,7 +36,7 @@ Skribent.runInProductionMode = true
 
 Logs are still passed to plugins despite active production mode.
 
-# Features
+## Features
 
 ### Tags
 
@@ -58,7 +60,8 @@ Logs of ignored tags are no passed down to plugins.
 
 Its possible to implement plugins which are get the same information passed as the log method and 
 additionally the production mode
-````swift
+
+```swift
 class ExamplePlugin: Plugin {
     func log(level: LogLevel, tag: Tag?, file: String, functionName: String, line: Int, production: Bool) {
         // log to Crashlytics/Logstash
@@ -67,5 +70,4 @@ class ExamplePlugin: Plugin {
 
 let plugin = ExamplePlugin()
 Skribent.add(plugin: plugin)
-````
-
+```
