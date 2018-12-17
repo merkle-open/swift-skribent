@@ -40,4 +40,12 @@ jobs:
       - image: norionomura/swift:42
     steps:
       - checkout
-      - run: swift test --parallel 
+      - run: swift test --parallel
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - test_xcode
+      - test_swift_package_manager
+      - test_linux
