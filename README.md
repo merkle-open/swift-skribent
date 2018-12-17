@@ -71,3 +71,23 @@ class ExamplePlugin: Plugin {
 let plugin = ExamplePlugin()
 Skribent.add(plugin: plugin)
 ```
+
+## Installation
+
+### Cocoapods
+
+Using Cocoapods ad the following to you `Podfifle` file
+
+```ruby
+target 'yourtarget' do
+    pod Skribent
+end
+```
+
+### Carthage
+
+Using Carthage add the following to your Cartfile
+
+```bash
+github "namics/swift-skribent"
+```
