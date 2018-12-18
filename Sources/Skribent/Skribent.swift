@@ -22,7 +22,6 @@ public class Skribent: Loggable {
         self.ignoredTags.remove(tag)
     }
 
-
     public func log(
             level: LogLevel,
             tag: Tag? = nil,
@@ -84,7 +83,12 @@ public class Skribent: Loggable {
         }
 
         plugins.forEach {
-            $0.log(level: level, tag: tag, file: file, functionName: functionName, line: line, production: self.productionMode)
+            $0.log(level: level,
+                    tag: tag,
+                    file: file,
+                    functionName: functionName,
+                    line: line,
+                    production: self.productionMode)
         }
     }
 

@@ -16,7 +16,6 @@ class ExamplePlugin: Plugin {
     }
 }
 
-
 class App {
     func initLogger() {
         let plugin = ExamplePlugin()
