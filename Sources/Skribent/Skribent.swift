@@ -35,7 +35,10 @@ public class Skribent: Loggable {
         }
 
         if !productionMode {
-            let unifiedPrefix = [level.prefix, tag?.prefix ?? "", tag?.name ?? ""].joined(separator: " ")
+            let tagNameInBrackets = tag?.name != nil ? "[\(tag!.name)]" : nil
+            let unifiedPrefix = [level.prefix, tag?.prefix, tagNameInBrackets]
+                    .compactMap { $0 }
+                    .joined(separator: " ")
 
             let formatString: StaticString = "%@ %@ Line %i %@"
             let formatStringError: StaticString = "%@ %@ Line %i %@ Error: %@"
