@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'Skribent'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.authors     = 'Namics AG'
   s.license     = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage    = 'https://github.com/namics/swift-skribent'
